@@ -76,6 +76,9 @@ header .profile-image {
 header .profile-image:hover {
   transform: scale(1.5) rotate(5deg);
 }
+.header2 {
+  padding-top: 120px;
+}
 .tag {
   background-color: #efefef;
   color: black;
@@ -83,6 +86,15 @@ header .profile-image:hover {
   border-radius: 5px;
   display: table;
   margin: 10px auto;
+}
+.name2 {
+  font-size: 2rem;
+}
+.subtitle {
+  font-size: 2.5rem;
+  background-color: #222;
+  color: yellow;
+  margin: 5px auto;
 }
 .location {
   background-color: #222;
@@ -100,6 +112,10 @@ header .profile-image:hover {
 }
 .card:hover {
   border-color: #ff99ff;
+}
+
+.goals:hover {
+  border-color: lime green;
 }
 
 ul.skills {
@@ -140,7 +156,13 @@ footer ul {
 footer ul li {
   display: inline-block;
 }
-
+.gallery-text {
+  font-weight: 600;
+}
+a .gallery-text {
+  text-decoration: none;
+  color: #000;
+}
 a.social {
   display: inline-block;
   text-indent: -9999px;
@@ -167,6 +189,24 @@ a.social:hover {
   clear: both;
 }
 
+.gallery-container {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: max-content;
+  grid-auto-flow: row;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+.gallery-item {
+  max-width: 85%;
+  height: auto;
+  padding-bottom: 25px;
+}
+img.gallery-item:hover {
+  opacity: 0.8;
+}
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
   .flex {
@@ -194,10 +234,22 @@ a.social:hover {
   main p {
     line-height: 1.6em;
   }
-
+  main {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 5% 80% 5%;
+    grid-template-rows: auto;
+    grid-auto-rows: max-content;
+    grid-auto-flow: column;
+  }
   footer {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 40px auto;
+  }
+  .gallery-container {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
